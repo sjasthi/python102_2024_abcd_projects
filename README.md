@@ -18,19 +18,19 @@ For all the following projects, you will make use of the same mechanism (which i
 https://abcd2.projectabcd.com/api/getinfo.php?id=50  (get the information about 50)
 https://abcd2.projectabcd.com/api/getinfo.php?id=650  (get the information about 650).
 
-[Project 10] Frequency table of SHEROES book:
+[Project 10] (All: Assignment 18) Frequency table of SHEROES book:
 
 N = 10 or 20 or 30 (some number given by the user)
 What are the top N words used in the SHEROES book? 
 You will be given the ABCD IDs of 256 profiles
 
-[Project 15] This is an extension to the Project 10
-We will maintain a list of stop words in a file (stop_words.txt). Stop words are such "the, a, an, in, I, etc.".
+[Project 15] (All: Assignment 19) This is an extension to the Project 10
+We will maintain a list of stop words in a file (stop_words.txt). Stop words are such "the, a, an, in, he, she, her".
 We will exclude those words in our top N frequency table.
 So, we want to take this as an optional parameter.
 convert_word_list_to_frequency_table(word_list, exclude_stop_words = True)
 
-[Project 20] Extension to Project 1.
+[Project 20] (Ahala) Extension to Project 1.
 Can you create a Word Cloud based on the top N frequent words?
 
 https://resilienteducator.com/wp-content/uploads/2015/09/Revising-With-Pictures-How-Word-Clouds-Help-Students-Become-Better-Writers.jpg
@@ -92,7 +92,7 @@ You can produce the book as follows.
 (option 2) As a Power Point file including the Picture of the character.
 
 
-[Project 80] Generate Power Point for SHEROES book
+[Project 80] (All) Generate Power Point for SHEROES book
 
 Assume that you are given the IDs of 256 sheroes.
 
@@ -104,7 +104,7 @@ And save the PPTX slide.
 
 Implementation  / Testing Strategy: You always test your code with 5 or 6 IDs. Once it is proven, feed all 256 IDs.
 
-[Project 90] Translation
+[Project 90] (All) Translation
 
 Assume that you are given the IDs of 256 sheroes.
 The user is also specifying the destination language for the translation (eg: Telugu, Hindi, Tamil, or other)
@@ -158,7 +158,7 @@ How many are from Tamilnadu?
 How many are from Bihar?
 What is the frequency table based on the state?
 
-[Project 150] Padma Awards:
+[Project 150]  (Ahala)  Padma Awards:
 
 How many SHEROES got Padma Awards?
 Who are they? What awards they got?
@@ -171,7 +171,7 @@ Generate word search puzzle for the final word list.
 Generate it as Power Point
 Also show the solutions.
 
-[Project 170] How many books are shipped ?  (Demonstrated in the class)
+[Project 170] (Instructor Demo) How many books are shipped ?  (Demonstrated in the class)
 
 I have a text file with addresses and the header of the address is in this format
 If a book is shipped to a profiled SHERO, I am adding (SHERO) at the end of the line.
@@ -186,7 +186,7 @@ So the final output should be:
 --> Total number of SHEROES: 25
 
 
-[Project 180]  TTS: Text to Speech
+[Project 180] (Instructor Demo / Exploration)  TTS: Text to Speech
 
 SHEROES writeup should be converted to audio file (mp4) using python libraries.
 
