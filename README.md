@@ -35,7 +35,7 @@ Can you create a Word Cloud based on the top N frequent words?
 
 https://resilienteducator.com/wp-content/uploads/2015/09/Revising-With-Pictures-How-Word-Clouds-Help-Students-Become-Better-Writers.jpg
 
-[Project 30] Length Table
+[Project 30] (Rama noonela) Length Table
 
 Can you produce a HTML table with the following fields?
 
@@ -44,7 +44,7 @@ Serial No (of SHEROES), ABCD ID, Name,  Length of the description, Length of Did
 And can you highlight all the ROWS where the "Total Length" > some threshold N words (For example, N can be 225)
 
 
-[Project 40] Language Analysis - Noun and Adjective count
+[Project 40] (Nidhi) Language Analysis - Noun and Adjective count
 
 https://abcd2.projectabcd.com/  (click on any image to see the description and did_you_know?)
 
@@ -125,7 +125,7 @@ How do I help the translator? I would like to send
 And send 256 + 256 pages of text document to the translator.  (English 1, Telugu 1 --> English 2 Telugu 2)
 
 
-[Project 110] Generate Word Document for review
+[Project 110] (Prabhav Sai) Generate Word Document for review
 
 It will be same as Project 9 or 10.
 Here you are generating a WORD document through python program
@@ -148,11 +148,11 @@ with
 And produce a report of what IDs I need to consider for updating on the website.
 (I want to update only those IDs who got some updates on the local version; I do not want to update all 256 each time)
 
-[Project 130] Date of Birth Analyzer
+[Project 130] (Sai Chennupati) Date of Birth Analyzer
 
 Can you create a histogram of sheroes based on their birth year (century)
 
-[Project 140] Histogram of Indian States
+[Project 140] (Samhita) Histogram of Indian States
 
 How many are from Tamilnadu?
 How many are from Bihar?
@@ -193,6 +193,6 @@ SHEROES writeup should be converted to audio file (mp4) using python libraries.
 [Project 190]  Convert the text from third person to first person
 using automation and AI
 
-[Project 200] US spellings are used in the text.
+[Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
 
 Can you identify all the words that would be spelled differently in UK English.
