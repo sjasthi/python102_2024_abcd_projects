@@ -3,9 +3,9 @@ This repo contains all the projects done by Python 102 students (the class of 20
 
 
 ============================================================================
-Our Strategy:   Assignment 18 : Project 1 (every one is doing it)
-                         Assignment 19:  Project 8 (PPT generation - Each student will do this)
-                         Assignment 20:  Project 9 (Google translation - Each student will do this)
+Our Strategy:   Assignment 18 : Project 10, 15 (every one is doing it)
+                Assignment 19:  Project 80 (PPT generation - Each student will do this)
+                Assignment 20:  Project 90 (Google translation - Each student will do this)
 
 Rest of the projects will be distributed across the class. If you are interested in any specific project, please drop me a note.
 
@@ -58,7 +58,7 @@ For the SHEROES book, can you produce this HTML table?
 Serial No (of SHEROES), ABCD ID, Name, count_of_nouns, count_of_adjectives
 
 
-[Project 50] Language Analysis - Ease of Reading, Lexile Score, Grade Level
+[Project 50]  Language Analysis - Ease of Reading, Lexile Score, Grade Level
 
 For the SHEROES book profiles, how do I assess our current writing is suitable for middle and high school students?
 
@@ -85,7 +85,7 @@ Here is the algorithm / logic:
             -- if there exists a name, we got a pair. Otherwise, move on to the next ID.
 
 
-[Project 70] Create Alphabet book?
+[Project 70] (Mayukha) Create Alphabet book?
 
 Problem Statement: I want to generate an alphabet book of SHEROES. 
 It will have 26 pages. Each page will contain a character starting with a specific letter (For example, "I" may have "Indira Gandhi")
@@ -117,7 +117,7 @@ Using the "google translation APIs", we want to translate (name, description and
 (option 2) As a Power Point file including the Picture of the character.
 
 
-[Project 100] Generate a Text file for translators
+[Project 100] (Anika) Generate a Text file for translators
 
 Problem Statement: The machine translation done by google will be awful. We can not use it as-is. We must pass it through the professional / human translator.
 
@@ -130,12 +130,11 @@ And send 256 + 256 pages of text document to the translator.  (English 1, Telugu
 
 [Project 110] (Prabhav Sai) Generate Word Document for review
 
-It will be same as Project 9 or 10.
 Here you are generating a WORD document through python program
 Every profile will be on a separate page of the word document.
 
 
-[Project 120] Compare Master version with the local version
+[Project 120] (Krish) Compare Master version with the local version
 
 Problem Statement: We (authors) are updating the write-ups on a google drive (which can be exported as EXCEL file). This is the "Work in Process" working document.
 
@@ -179,7 +178,7 @@ Also show the solutions.
 I have a text file with addresses and the header of the address is in this format
 If a book is shipped to a profiled SHERO, I am adding (SHERO) at the end of the line.
 
-[ID of the address]   (number)  copy/copies/book/books  (SHERO)
+ID of the address   (number)  copy/copies/book/books  (SHERO)
 
 This header is followed by the address.
 
