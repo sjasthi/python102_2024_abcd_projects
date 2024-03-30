@@ -33,7 +33,7 @@ We will exclude those words in our top N frequency table.
 So, we want to take this as an optional parameter.
 convert_word_list_to_frequency_table(word_list, exclude_stop_words = True)
 
-### [Project 20] (Ahala) Extension to Project 1.
+### [Project 20] (Ahala) Word Cloud based on the frequency
 Can you create a Word Cloud based on the top N frequent words?
 
 https://resilienteducator.com/wp-content/uploads/2015/09/Revising-With-Pictures-How-Word-Clouds-Help-Students-Become-Better-Writers.jpg
