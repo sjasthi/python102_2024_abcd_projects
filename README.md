@@ -18,8 +18,8 @@ Background / Recap: You already did an assignment where you can call an API from
 
 For all the following projects, you will make use of the same mechanism (which is basically call the API for an ID and get the details about it).
 
-https://abcd2.projectabcd.com/api/getinfo.php?id=50  (get the information about 50)
-https://abcd2.projectabcd.com/api/getinfo.php?id=650  (get the information about 650).
++ https://abcd2.projectabcd.com/api/getinfo.php?id=50  (get the information about 50)
++ https://abcd2.projectabcd.com/api/getinfo.php?id=650  (get the information about 650).
 
 ### [Project 10] (All: Assignment 18) Frequency table of SHEROES book:
 
