@@ -2,13 +2,14 @@
 This repo contains all the projects done by Python 102 students (the class of 2023-2024) for Project ABCD.
 
 
-=============================================
+============================================================================
 Our Strategy:   Assignment 18 : Project 1 (every one is doing it)
                          Assignment 19:  Project 8 (PPT generation - Each student will do this)
                          Assignment 20:  Project 9 (Google translation - Each student will do this)
 
 Rest of the projects will be distributed across the class. If you are interested in any specific project, please drop me a note.
-=============================================
+
+==============================================================================
 
 
 Background / Recap: You already did an assignment where you can call an API from http://abcd2.projectabcd.com and display a dress information as HTML.
