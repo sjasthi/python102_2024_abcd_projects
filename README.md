@@ -3,6 +3,7 @@ This repo contains all the projects done by Python 102 students (the class of 20
 
 
 ============================================================================
+
 Our Strategy:
 + Assignment 18 : Project 10, 15 (every one is doing it)
 + Project 80 (PPT generation - Each student will do this)
