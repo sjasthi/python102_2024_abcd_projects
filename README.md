@@ -21,24 +21,24 @@ For all the following projects, you will make use of the same mechanism (which i
 https://abcd2.projectabcd.com/api/getinfo.php?id=50  (get the information about 50)
 https://abcd2.projectabcd.com/api/getinfo.php?id=650  (get the information about 650).
 
-[Project 10] (All: Assignment 18) Frequency table of SHEROES book:
+###[Project 10] (All: Assignment 18) Frequency table of SHEROES book:
 
 N = 10 or 20 or 30 (some number given by the user)
 What are the top N words used in the SHEROES book? 
 You will be given the ABCD IDs of 256 profiles
 
-[Project 15] (All: Assignment 19) This is an extension to the Project 10
+###[Project 15] (All: Assignment 19) This is an extension to the Project 10
 We will maintain a list of stop words in a file (stop_words.txt). Stop words are such "the, a, an, in, he, she, her".
 We will exclude those words in our top N frequency table.
 So, we want to take this as an optional parameter.
 convert_word_list_to_frequency_table(word_list, exclude_stop_words = True)
 
-[Project 20] (Ahala) Extension to Project 1.
+###[Project 20] (Ahala) Extension to Project 1.
 Can you create a Word Cloud based on the top N frequent words?
 
 https://resilienteducator.com/wp-content/uploads/2015/09/Revising-With-Pictures-How-Word-Clouds-Help-Students-Become-Better-Writers.jpg
 
-[Project 30] (Rama noonela) Length Table
+###[Project 30] (Rama noonela) Length Table
 
 Reference: https://www.w3schools.com/
 
@@ -49,7 +49,7 @@ Serial No (of SHEROES), ABCD ID, Name,  Length of the description, Length of Did
 And can you highlight all the ROWS where the "Total Length" > some threshold N words (For example, N can be 225)
 
 
-[Project 40] (Nidhi) Language Analysis - Noun and Adjective count
+###[Project 40] (Nidhi) Language Analysis - Noun and Adjective count
 
 https://abcd2.projectabcd.com/  (click on any image to see the description and did_you_know?)
 
@@ -60,7 +60,7 @@ For the SHEROES book, can you produce this HTML table?
 Serial No (of SHEROES), ABCD ID, Name, count_of_nouns, count_of_adjectives
 
 
-[Project 50]  Language Analysis - Ease of Reading, Lexile Score, Grade Level
+###[Project 50]  Language Analysis - Ease of Reading, Lexile Score, Grade Level
 
 For the SHEROES book profiles, how do I assess our current writing is suitable for middle and high school students?
 
@@ -69,7 +69,7 @@ Can we do comparative analysis?
 
 Serial No (of SHEROES), ABCD ID, Name,  measure_1 (lexile score), measure_2 (grade level), measure_3 (ease of reading)
 
-[Project 60] Who is my pair?
+###[Project 60] Who is my pair?
 
 It is interesting to note that some SHEROES are inspired by other SHEROES.
 Some SHEROES may have friendships or some references.
@@ -87,7 +87,7 @@ Here is the algorithm / logic:
             -- if there exists a name, we got a pair. Otherwise, move on to the next ID.
 
 
-[Project 70] (Mayukha) Create Alphabet book?
+###[Project 70] (Mayukha) Create Alphabet book?
 
 Problem Statement: I want to generate an alphabet book of SHEROES. 
 It will have 26 pages. Each page will contain a character starting with a specific letter (For example, "I" may have "Indira Gandhi")
@@ -97,7 +97,7 @@ You can produce the book as follows.
 (option 2) As a Power Point file including the Picture of the character.
 
 
-[Project 80] (All) Generate Power Point for SHEROES book
+###[Project 80] (All) Generate Power Point for SHEROES book
 
 Assume that you are given the IDs of 256 sheroes.
 
@@ -109,7 +109,7 @@ And save the PPTX slide.
 
 Implementation  / Testing Strategy: You always test your code with 5 or 6 IDs. Once it is proven, feed all 256 IDs.
 
-[Project 90] (All) Translation
+###[Project 90] (All) Translation
 
 Assume that you are given the IDs of 256 sheroes.
 The user is also specifying the destination language for the translation (eg: Telugu, Hindi, Tamil, or other)
@@ -119,7 +119,7 @@ Using the "google translation APIs", we want to translate (name, description and
 (option 2) As a Power Point file including the Picture of the character.
 
 
-[Project 100] (Anika) Generate a Text file for translators
+###[Project 100] (Anika) Generate a Text file for translators
 
 Problem Statement: The machine translation done by google will be awful. We can not use it as-is. We must pass it through the professional / human translator.
 
@@ -130,13 +130,13 @@ How do I help the translator? I would like to send
 And send 256 + 256 pages of text document to the translator.  (English 1, Telugu 1 --> English 2 Telugu 2)
 
 
-[Project 110] (Prabhav Sai) Generate Word Document for review
+###[Project 110] (Prabhav Sai) Generate Word Document for review
 
 Here you are generating a WORD document through python program
 Every profile will be on a separate page of the word document.
 
 
-[Project 120] (Krish) Compare Master version with the local version
+###[Project 120] (Krish) Compare Master version with the local version
 
 Problem Statement: We (authors) are updating the write-ups on a google drive (which can be exported as EXCEL file). This is the "Work in Process" working document.
 
@@ -152,22 +152,22 @@ with
 And produce a report of what IDs I need to consider for updating on the website.
 (I want to update only those IDs who got some updates on the local version; I do not want to update all 256 each time)
 
-[Project 130] (Sai Chennupati) Date of Birth Analyzer
+###[Project 130] (Sai Chennupati) Date of Birth Analyzer
 
 Can you create a histogram of sheroes based on their birth year (century)
 
-[Project 140] (Samhita) Histogram of Indian States
+###[Project 140] (Samhita) Histogram of Indian States
 
 How many are from Tamilnadu?
 How many are from Bihar?
 What is the frequency table based on the state?
 
-[Project 150]  (Ahala)  Padma Awards:
+###[Project 150]  (Ahala)  Padma Awards:
 
 How many SHEROES got Padma Awards?
 Who are they? What awards they got?
 
-[Project 160] Word Search Puzzle Generator
+###[Project 160] Word Search Puzzle Generator
 
 Identify 10 words for each ID.
 Given an option to the user to edit / modify / add / delete the auto-selected word list
@@ -175,7 +175,7 @@ Generate word search puzzle for the final word list.
 Generate it as Power Point
 Also show the solutions.
 
-[Project 170] (Instructor Demo) How many books are shipped ?  (Demonstrated in the class)
+###[Project 170] (Instructor Demo) How many books are shipped ?  (Demonstrated in the class)
 
 I have a text file with addresses and the header of the address is in this format
 If a book is shipped to a profiled SHERO, I am adding (SHERO) at the end of the line.
@@ -190,13 +190,13 @@ So the final output should be:
 --> Total number of SHEROES: 25
 
 
-[Project 180] (Instructor Demo / Exploration)  TTS: Text to Speech
+###[Project 180] (Instructor Demo / Exploration)  TTS: Text to Speech
 
 SHEROES writeup should be converted to audio file (mp4) using python libraries.
 
-[Project 190]  Convert the text from third person to first person
+###[Project 190]  Convert the text from third person to first person
 using automation and AI
 
-[Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
+###[Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
 
 Can you identify all the words that would be spelled differently in UK English.
