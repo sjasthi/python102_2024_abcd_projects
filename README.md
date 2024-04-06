@@ -97,7 +97,7 @@ You can produce the book as follows.
 (option 2) As a Power Point file including the Picture of the character.
 
 
-### [Project 80] (All) Generate Power Point for SHEROES book
+### [Project 80] (All) (Jasthi to demo the example) Generate Power Point for SHEROES book
 
 Assume that you are given the IDs of 256 sheroes.
 
@@ -109,7 +109,7 @@ And save the PPTX slide.
 
 Implementation  / Testing Strategy: You always test your code with 5 or 6 IDs. Once it is proven, feed all 256 IDs.
 
-### [Project 90] (All) Translation
+### [Project 90] (All) (Jasthi to demo the example) Translation
 
 Assume that you are given the IDs of 256 sheroes.
 The user is also specifying the destination language for the translation (eg: Telugu, Hindi, Tamil, or other)
@@ -152,6 +152,8 @@ with
 And produce a report of what IDs I need to consider for updating on the website.
 (I want to update only those IDs who got some updates on the local version; I do not want to update all 256 each time)
 
+Input: You are given google sheet hosted on a google drive. How can you connect to it from python? Then read the text from google sheet (you need to explore pandas to read the excel; and then compare it with projectabcd.com website to report out any discrepancies)
+
 ### [Project 130] (Sai Chennupati) Date of Birth Analyzer
 
 Can you create a histogram of sheroes based on their birth year (century)
@@ -161,6 +163,8 @@ Can you create a histogram of sheroes based on their birth year (century)
 How many are from Tamilnadu?
 How many are from Bihar?
 What is the frequency table based on the state?
+In text format - OK
+In visual format - matplotlib
 
 ### [Project 150]  (Ahala)  Padma Awards:
 
