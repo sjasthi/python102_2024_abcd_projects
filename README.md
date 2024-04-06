@@ -60,7 +60,7 @@ For the SHEROES book, can you produce this HTML table?
 Serial No (of SHEROES), ABCD ID, Name, count_of_nouns, count_of_adjectives
 
 
-### [Project 50]  Language Analysis - Ease of Reading, Lexile Score, Grade Level
+### [Project 50] (Pavani)  Language Analysis - Ease of Reading, Lexile Score, Grade Level
 
 For the SHEROES book profiles, how do I assess our current writing is suitable for middle and high school students?
 
@@ -69,7 +69,7 @@ Can we do comparative analysis?
 
 Serial No (of SHEROES), ABCD ID, Name,  measure_1 (lexile score), measure_2 (grade level), measure_3 (ease of reading)
 
-### [Project 60] Who is my pair?
+### [Project 60] (Jasthi to demo) Who is my pair?
 
 It is interesting to note that some SHEROES are inspired by other SHEROES.
 Some SHEROES may have friendships or some references.
@@ -167,7 +167,7 @@ What is the frequency table based on the state?
 How many SHEROES got Padma Awards?
 Who are they? What awards they got?
 
-### [Project 160] Word Search Puzzle Generator
+### [Project 160] (Sumedh Ghatti) Word Search Puzzle Generator
 
 Identify 10 words for each ID.
 Given an option to the user to edit / modify / add / delete the auto-selected word list
