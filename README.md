@@ -5,7 +5,14 @@ This repo contains all the projects done by Python 102 students (the class of 20
 ============================================================================
 
 Our Strategy:
-+ Assignment 18 : Project 10, 15 (every one is doing it)
+First phase:
++ Project 10  (Frequency Table - Each student has done this as part of Assignment 18)
++ Project 15 (Frequency Table with out the stop words - Each student has done this as part of Assignment 18)
+
+  Second Phase
++ Projects assigned to you
+
+  Third Phase
 + Project 80 (PPT generation - Each student will do this)
 + Project 90 (Google translation - Each student will do this)
 
@@ -220,7 +227,7 @@ So the final output should be:
 --> Total number of SHEROES: 25
 
 
-### [Project 180] (Instructor Demo / Exploration)  TTS: Text to Speech
+### [Project 180] (Instructor Demo / Exploration - Done)  TTS: Text to Speech
 
 SHEROES writeup should be converted to audio file (mp4) using python libraries.
 
@@ -230,3 +237,16 @@ using automation and AI
 ### [Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
 
 Can you identify all the words that would be spelled differently in UK English.
+
+### [Project 210] (nakul) Generation of Bingo Tables
+
+Assume 5 * 5  grid (table).
+Assume 10 people are playing the bingo
+
+Generate 10 random cards as follows
+            From the 256 Sheroes, pick 25 names at random.
+            Place those in 5 * 5 grid
+
+(Option 1): Generate text based bingo cards
+(Option 2): Generate image based bingo cards
+(Option 3): Generate bingo cards containing both text + images
