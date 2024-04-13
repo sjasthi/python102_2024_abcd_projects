@@ -1,3 +1,4 @@
+# !pip install python-docx
 from docx import Document
 import json
 import requests
@@ -12,15 +13,13 @@ for x in abcd_ids:
     json_response = json.loads(response.text)
     json_response = dict(json_response)
     list_of_ids.append(json_response)
-
-for y in list_of_ids:
     if y['response_code'] == 400:
         continue
-    abcd_document.add_heading(f'{y['data']['name']} ABCD ID: {y['data']['id']}', level=0)
-    abcd_document.add_paragraph(f'Main Description: \n{y['data']['description']}')
-    abcd_document.add_paragraph(f'Did you know: \n{y['data']['did_you_know']}')
+    abcd_document.add_heading(f'{json_response['data']['name']} ABCD ID: {json_response['data']['id']}', level=0)
+    abcd_document.add_paragraph(f'Main Description: \n{json_response['data']['description']}')
+    abcd_document.add_paragraph(f'Did you know: \n{json_response['data']['did_you_know']}')
     abcd_document.add_heading('Technical Stuff: \n', level=1)
-    abcd_document.add_paragraph(f'Category: {y['data']['category']}\nType: {y['data']['type']}\nState Abbreviation: {y['data']['state_name']}\nKey Words: {y['data']['key_words']}\nCurrent Status: {y['data']['status']}\nNotes: {y['data']['notes']}\nBook: {y['data']['book']}\nTag Line: {y['data']['tag_line']}', style='List Bullet')
+    abcd_document.add_paragraph(f'Category: {json_response['data']['category']}\nType: {json_response['data']['type']}\nState Abbreviation: {json_response['data']['state_name']}\nKey Words: {json_response['data']['key_words']}\nCurrent Status: {json_response['data']['status']}\nNotes: {json_response['data']['notes']}\nBook: {json_response['data']['book']}\nTag Line: {json_response['data']['tag_line']}', style='List Bullet')
     abcd_document.add_page_break()
 
 abcd_document.save('Project_ABCD.docx')
