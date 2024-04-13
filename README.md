@@ -171,6 +171,32 @@ In visual format - matplotlib
 How many SHEROES got Padma Awards?
 Who are they? What awards they got?
 
+(Requirement) We need to display the output in two different ways.
+
+Name-Driven output
+------------------
+Anita Pauldurai - Padma Shri
+Mother Teresa - Padma Shri, Padma Bhushan, Bharat Ratna
+..
+..
+
+Award-Driven output
+-------------------
+Padma Shri - Anita Pauldurai, Mother Teresa
+Padma Bhushan - Mother Teresa
+Bharata Ratna - Mother Teresa
+
+(Design/Implementation)
+-----------------------
+Option 1: list of tuples
+Option 2: dictionary of [name, award list]
+Option 3: dictionary of [award, name_list]
+option 4: option 2 and option 3 in one go
+
+I can somehow acheive the final result (OK)
+I am achieving the result in the most efficient way (python 102 level)
+
+
 ### [Project 160] (Sumedh Ghatti) Word Search Puzzle Generator
 
 Identify 10 words for each ID.
