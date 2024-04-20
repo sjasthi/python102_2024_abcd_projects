@@ -238,6 +238,23 @@ using automation and AI
 
 Can you identify all the words that would be spelled differently in UK English.
 
+(Option 1): id_driven display  (verbose)
+abcd_id, name,  us_spelling, uk_spelling
+1, abala bose, color, colour
+1, abala bose, honor, honour
+99, sridevi, color, colour
+
+(Option 2): id_driven display   (one row per id)
+abcd_id, name,  us_spelling, uk_spelling
+1, abala bose, [color, honor], [colour, honour]
+99, sridevi, [color], [colour]
+
+(Option 3): word_driven display   
+us_spelling, uk_spelling, [abcd_ids], [abcd_names]
+color, colour, [1, 99], [abala bose, sridevi]
+honor, honour, [1], [abala bose]
+
+
 ### [Project 210] (nakul) Generation of Bingo Tables
 
 Assume 5 * 5  grid (table).
