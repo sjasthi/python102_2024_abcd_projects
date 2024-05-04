@@ -267,3 +267,13 @@ Generate 10 random cards as follows
 (Option 1): Generate text based bingo cards
 (Option 2): Generate image based bingo cards
 (Option 3): Generate bingo cards containing both text + images
+
+
+### [Project 220] (???) Third Person to First Person translation
+
+Many teachers and children are translating the SHEROES articles from third person to first person
+for mono-acts and such.
+
+We can rely on AI to do such translations (aka transformations / rewrites).
+
+This project focusses on integrating with ChatGPT or other tools to convert the SHEROES text from third-person to first person.
