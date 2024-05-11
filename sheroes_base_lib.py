@@ -1,6 +1,8 @@
 #============================================================
 #  This base libary contains all the helper functions needed for Python102 projects
 #  We will import these into other python scripts as needed
+
+# import sheroes_base_lib as sheroes
 #=============================================================
 
 import requests
@@ -33,11 +35,13 @@ sheroes_id_list = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101,
                    761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772]
 
 
-sheroes_id_list = [761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772]
+sheroes_id_list = [761, 762, 763, 764, 765, 766, 767, 768]
+
 '''
-Fetch the data from API
+Fetch the json data from API
+The data_list is a list of dictionaries where each dictionary encapsulates the details of an ID.
 '''
-def fetch_data_from_api(ids):
+def fetch_data_from_api(ids = sheroes_id_list):
     data_list = []
     for id in ids:
         url = API_BASE_URL + str(id)
@@ -55,6 +59,12 @@ def fetch_data_from_api(ids):
 
     return data_list
 
+
+#==== other helper functions to be done =========
+# get the name for a given id
+# get the description for a given id
+# get the did you know for a given id
+# get the complete dictionary for a given id
 
 '''
 Main method for fetching the data through APIs
