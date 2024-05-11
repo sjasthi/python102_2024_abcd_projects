@@ -231,8 +231,15 @@ So the final output should be:
 
 SHEROES writeup should be converted to audio file (mp4) using python libraries.
 
-### [Project 190]  Convert the text from third person to first person
+### [Project 190]  (Prabhav) Convert the text from third person to first person
 using automation and AI
+Many teachers and children are translating the SHEROES articles from third person to first person
+for mono-acts and such.
+
+We can rely on AI to do such translations (aka transformations / rewrites).
+
+This project focusses on integrating with ChatGPT or other tools to convert the SHEROES text from third-person to first person.
+
 
 ### [Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
 
@@ -271,9 +278,3 @@ Generate 10 random cards as follows
 
 ### [Project 220] (???) Third Person to First Person translation
 
-Many teachers and children are translating the SHEROES articles from third person to first person
-for mono-acts and such.
-
-We can rely on AI to do such translations (aka transformations / rewrites).
-
-This project focusses on integrating with ChatGPT or other tools to convert the SHEROES text from third-person to first person.
