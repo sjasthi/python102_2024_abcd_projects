@@ -1,9 +1,10 @@
 import json
 import random
-from pptx import Presentation
-import requests
 import re
+import requests
 from collections import Counter
+from pptx import Presentation
+from pptx.util import Pt
 
 # Define the ABCD ID list
 abcd_id_list = [
@@ -18,7 +19,6 @@ abcd_id_list = [
     747, 757, 26, 765, 667
 ]
 
-
 # Function to fetch text data for a given ABCD ID
 def fetch_text_data(abcd_id):
     response = requests.get(f'https://abcd2.projectabcd.com/api/getinfo.php?id={abcd_id}', headers={"User-Agent": "XY"})
@@ -32,7 +32,6 @@ def fetch_text_data(abcd_id):
         return text_data.strip()
     else:
         return None
-
 
 # Function to interactively modify the word list
 def modify_word_list(word_list):
@@ -60,21 +59,35 @@ def modify_word_list(word_list):
         else:
             print("Invalid action. Please choose again.")
 
-
 # Function to generate the word search grid
 def generate_word_search_grid(words_for_puzzle):
     puzzle_size = 10  # Size of the puzzle grid
     puzzle_grid = [[' ' for _ in range(puzzle_size)] for _ in range(puzzle_size)]
+    directions = ['horizontal', 'vertical', 'diagonal']
     for word in words_for_puzzle:
-        direction = random.choice(['horizontal', 'vertical', 'diagonal'])
+        direction = random.choice(directions)
+        row = random.randint(0, puzzle_size - 1)
+        col = random.randint(0, puzzle_size - 1)
         if direction == 'horizontal':
-            pass  # Logic to place word horizontally
+            for letter in word:
+                if col >= puzzle_size:
+                    break
+                puzzle_grid[row][col] = letter
+                col += 1
         elif direction == 'vertical':
-            pass  # Logic to place word vertically
+            for letter in word:
+                if row >= puzzle_size:
+                    break
+                puzzle_grid[row][col] = letter
+                row += 1
         else:
-            pass  # Logic to place word diagonally
+            for letter in word:
+                if row >= puzzle_size or col >= puzzle_size:
+                    break
+                puzzle_grid[row][col] = letter
+                row += 1
+                col += 1
     return puzzle_grid
-
 
 # Function to create PowerPoint presentation
 def create_powerpoint_presentation(puzzle, solution):
@@ -86,7 +99,11 @@ def create_powerpoint_presentation(puzzle, solution):
     # Check if placeholder exists
     if len(puzzle_slide.placeholders) > 1:
         puzzle_text = puzzle_slide.placeholders[1].text_frame
-        puzzle_text.text = puzzle
+        puzzle_text.clear()  # Clear existing text
+        for line in puzzle.split('\n'):
+            p = puzzle_text.add_paragraph()
+            p.text = line
+            p.font.size = Pt(18)
     else:
         print("No placeholder found on puzzle slide.")
 
@@ -97,12 +114,12 @@ def create_powerpoint_presentation(puzzle, solution):
     # Check if placeholder exists
     if len(solution_slide.placeholders) > 1:
         solution_text = solution_slide.placeholders[1].text_frame
+        solution_text.clear()  # Clear existing text
         solution_text.text = solution
     else:
         print("No placeholder found on solution slide.")
 
     prs.save("word_search_puzzle.pptx")
-
 
 if __name__ == "__main__":
     # Fetch text data for each ABCD ID
@@ -139,3 +156,4 @@ if __name__ == "__main__":
 
     # Create PowerPoint presentation
     create_powerpoint_presentation(puzzle_str, solution_str)
+
