@@ -1,0 +1,33 @@
+import random
+import requests
+import json
+from collections import Counter
+import re
+#import matplotlib.pyplot as plt
+'''
+def get_response(id_number):
+    response = requests.get(f'https://abcd2.projectabcd.com/api/getinfo.php?id={id_number}', headers={"User-Agent": "XY"})
+    json_response = json.loads(response.text)
+    name = json_response['data']['name']
+    return name
+'''
+def count_elements(seq) -> dict:
+    hist = {}
+    for i in seq:
+        hist[i] = hist.get(i,0) + 1
+    return hist
+
+def ascii_hist(seq) -> None:
+    counted = count_elements(seq)
+    for j in sorted(counted):
+        print(f'{j} {"+" * counted[j]}')
+
+random.seed(1)
+vals = [2,1,19,30,6,2,5,8,10]
+freq =[random.randint(5,15) for _ in vals]
+data = []
+
+for f, v in zip(freq, vals):
+    data.extend([v] * f)
+
+ascii_hist(data)
