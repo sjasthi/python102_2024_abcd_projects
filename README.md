@@ -275,6 +275,3 @@ Generate 10 random cards as follows
 (Option 2): Generate image based bingo cards
 (Option 3): Generate bingo cards containing both text + images
 
-
-### [Project 220] (???) Third Person to First Person translation
-
