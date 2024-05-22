@@ -2,9 +2,17 @@
 import requests
 import json
 
+# creates the file regardless of where you are or whether it exists
+beta = open("stop_words.txt", "w")
+beta.write("the, a, an, in, he, she, her")
+del beta
+
+# opens the file
 beta = open("stop_words.txt", "r")
 alpha = beta.read()
 stop_words = alpha.split(", ")
+del beta
+del alpha
 
 abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 112, 114, 115, 116, 117, 119, 151,
             171, 183, 188, 196, 201, 206, 235, 265, 275, 276, 306, 313, 314, 316, 317, 318, 319, 320, 321, 322, 323,
