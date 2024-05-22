@@ -8,7 +8,7 @@ id_list = [669, 739, 690, 742, 724, 112, 668, 714, 671, 32]
 
 for abcd in id_list:
     response = requests.get(f'https://abcd2.projectabcd.com/api/getinfo.php?id={abcd}', headers={"User-Agent": "XY"})
-    json_response = json.loads(response.text)
+    json_response = dict(json.loads(response.text))
     description = json_response['data']['description']
     # pyttsx3 (doesn't work as well as I thought)
     engine = pyttsx3.init()
