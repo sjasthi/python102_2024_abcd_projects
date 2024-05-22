@@ -22,8 +22,7 @@ abcd_document = Document()
 # creating each dictionary and adding it to an empty list
 for x in abcd_ids:
     response = requests.get(f'https://abcd2.projectabcd.com/api/getinfo.php?id={x}', headers={"User-Agent": "XY"})
-    json_response = json.loads(response.text)
-    json_response = dict(json_response)
+    json_response = dict(json.loads(response.text))
     if json_response['response_code'] == 400:
         continue
     abcd_document.add_heading(f'{json_response['data']['name']} ABCD ID: {json_response['data']['id']}', level=0)
