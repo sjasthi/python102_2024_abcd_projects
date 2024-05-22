@@ -3,14 +3,20 @@ import requests
 import json
 
 # creates the file regardless of where you are or whether it exists
+alpha = open("punctuation.txt", "w")
+alpha.write(".\n,\n!\n?\n'")
 beta = open("stop_words.txt", "w")
 beta.write("the, a, an, in, he, she, her")
-del beta
 
 # opens the file
 beta = open("stop_words.txt", "r")
 alpha = beta.read()
 stop_words = alpha.split(", ")
+del beta
+del alpha
+beta = open("punctuation.txt", "r")
+alpha = beta.read()
+punctuation = alpha.split("\n")
 del beta
 del alpha
 
@@ -29,41 +35,37 @@ abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 
             771, 772]
 
 
-def create_frequency_table(id, identify_stop_words):
-    response = requests.get(f'https://abcd2.projectabcd.com/api/getinfo.php?id={id}', headers={"User-Agent": "XY"})
-    json_response = json.loads(response.text)
-    name = json_response['data']['name']
-    description = json_response['data']['description']
-    description_list = description.split()
-    description_dictionary: dict[str, int] = {}
-    if identify_stop_words == True:
-        for word in description_list:
-            if word in stop_words:
-                continue
-            if word not in description_dictionary:
-                description_dictionary.update({word: 1})
-            elif word in description_dictionary:
-                v = description_dictionary[word]
-                v = v + 1
-                description_dictionary[word] = v
-        print(f"Frequency Table for Description of {name}")
-        del name
-        print("\n# | Word\n--|----------------")
-        for key in description_dictionary:
-            print(f'{description_dictionary[key]} | {key}')
-    if identify_stop_words == False:
-        for word in description_list:
-            if word not in description_dictionary:
-                description_dictionary.update({word: 1})
-            elif word in description_dictionary:
-                v = description_dictionary[word]
-                v = v + 1
-                description_dictionary[word] = v
-        print(f"Frequency Table for Description of {name}")
-        del name
-        print("\n# | Word\n--|----------------")
+def create_frequency_table(abcd: list, identify_stop_words):
+    for x in abcd:
+        response = requests.get(url=f'https://abcd2.projectabcd.com/api/getinfo.php?id={x}', headers={"User-Agent": "XY"})
+        json_response = json.loads(response.text)
+        if json_response['response_code'] == 400:
+            continue
+        print(f"\nFrequency Table for Description of {json_response['data']['name']}, ABCD ID: {x}\n# | Word\n--|----------------")
+        description = json_response['data']['description']
+        description_list = description.split()
+        description_dictionary: dict[str, int] = {}
+        if identify_stop_words:
+            for word in description_list:
+                for p in punctuation:
+                    if p in word:
+                        word = word.replace(p, "")
+                if word in stop_words:
+                    continue
+                if word not in description_dictionary:
+                    description_dictionary.update({word: 1})
+                elif word in description_dictionary:
+                    description_dictionary[word] += 1
+        if not identify_stop_words:
+            for word in description_list:
+                for p in punctuation:
+                    if p in word:
+                        word = word.replace(p, "")
+                if word not in description_dictionary:
+                    description_dictionary.update({word: 1})
+                elif word in description_dictionary:
+                    description_dictionary[word] += 1
         for key in description_dictionary:
             print(f'{description_dictionary[key]} | {key}')
 
-
-create_frequency_table(714, True)
+create_frequency_table(abcd=abcd_ids, identify_stop_words=True)
