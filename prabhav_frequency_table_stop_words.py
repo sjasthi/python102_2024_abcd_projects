@@ -38,7 +38,7 @@ abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 
 def create_frequency_table(abcd: list, identify_stop_words):
     for x in abcd:
         response = requests.get(url=f'https://abcd2.projectabcd.com/api/getinfo.php?id={x}', headers={"User-Agent": "XY"})
-        json_response = json.loads(response.text)
+        json_response = dict(json.loads(response.text))
         if json_response['response_code'] == 400:
             continue
         print(f"\nFrequency Table for Description of {json_response['data']['name']}, ABCD ID: {x}\n# | Word\n--|----------------")
