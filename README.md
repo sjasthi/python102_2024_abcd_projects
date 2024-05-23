@@ -2,39 +2,13 @@
 This repo contains all the projects done by Python 102 students (the class of 2023-2024) for Project ABCD.
 ## Convention to be used -  <first_name>_<simple_project_name>.py
 
-============================================================================
-
-Our Strategy:
-First phase:
-+ Project 10  (Frequency Table - Each student has done this as part of Assignment 18)
-+ Project 15 (Frequency Table with out the stop words - Each student has done this as part of Assignment 18)
-
-  Second Phase
-+ Projects assigned to you
-
-  Third Phase
-+ Project 80 (PPT generation - Each student will do this)
-+ Project 90 (Google translation - Each student will do this)
-
-Rest of the projects will be distributed across the class. If you are interested in any specific project, please drop me a note.
-
-==============================================================================
-
-
-Background / Recap: You already did an assignment where you can call an API from http://abcd2.projectabcd.com and display a dress information as HTML.
-
-For all the following projects, you will make use of the same mechanism (which is basically call the API for an ID and get the details about it).
-
-+ https://abcd2.projectabcd.com/api/getinfo.php?id=50  (get the information about 50)
-+ https://abcd2.projectabcd.com/api/getinfo.php?id=650  (get the information about 650).
-
-### [Project 10] (All: Assignment 18) Frequency table of SHEROES book:
+### [Project 10] (All) Frequency table of SHEROES book:
 
 N = 10 or 20 or 30 (some number given by the user)
 What are the top N words used in the SHEROES book? 
 You will be given the ABCD IDs of 256 profiles
 
-### [Project 15] (All: Assignment 19) This is an extension to the Project 10
+### [Project 15] (All) Frequency table of SHEROES book: With Stop Words
 We will maintain a list of stop words in a file (stop_words.txt). Stop words are such "the, a, an, in, he, she, her".
 We will exclude those words in our top N frequency table.
 So, we want to take this as an optional parameter.
@@ -76,7 +50,7 @@ Can we do comparative analysis?
 
 Serial No (of SHEROES), ABCD ID, Name,  measure_1 (lexile score), measure_2 (grade level), measure_3 (ease of reading)
 
-### [Project 60] (Jasthi to demo) Who is my pair?
+### [Project 60] (Ahala) Who is my pair?
 
 It is interesting to note that some SHEROES are inspired by other SHEROES.
 Some SHEROES may have friendships or some references.
@@ -104,7 +78,7 @@ You can produce the book as follows.
 (option 2) As a Power Point file including the Picture of the character.
 
 
-### [Project 80] (All) (Jasthi to demo the example) Generate Power Point for SHEROES book
+### [Project 80] (Ahala) Generate Power Point for SHEROES book
 
 Assume that you are given the IDs of 256 sheroes.
 
@@ -116,7 +90,7 @@ And save the PPTX slide.
 
 Implementation  / Testing Strategy: You always test your code with 5 or 6 IDs. Once it is proven, feed all 256 IDs.
 
-### [Project 90] (All) (Jasthi to demo the example) Translation
+### [Project 90] (Ahala) Translation
 
 Assume that you are given the IDs of 256 sheroes.
 The user is also specifying the destination language for the translation (eg: Telugu, Hindi, Tamil, or other)
@@ -212,7 +186,7 @@ Generate word search puzzle for the final word list.
 Generate it as Power Point
 Also show the solutions.
 
-### [Project 170] (Instructor Demo) How many books are shipped ?  (Demonstrated in the class)
+### [Project 170] (Jasthi) How many books are shipped ?  (Demonstrated in the class)
 
 I have a text file with addresses and the header of the address is in this format
 If a book is shipped to a profiled SHERO, I am adding (SHERO) at the end of the line.
@@ -227,7 +201,7 @@ So the final output should be:
 --> Total number of SHEROES: 25
 
 
-### [Project 180] (Instructor Demo / Exploration - Done)  TTS: Text to Speech
+### [Project 180] (Ahala)  TTS: Text to Speech
 
 SHEROES writeup should be converted to audio file (mp4) using python libraries.
 
@@ -241,7 +215,7 @@ We can rely on AI to do such translations (aka transformations / rewrites).
 This project focusses on integrating with ChatGPT or other tools to convert the SHEROES text from third-person to first person.
 
 
-### [Project 200] (Prashanthi / Sailakshmi) US spellings are used in the text.
+### [Project 200] (Prashanthi) US spellings are used in the text.
 
 Can you identify all the words that would be spelled differently in UK English.
 
@@ -262,7 +236,7 @@ color, colour, [1, 99], [abala bose, sridevi]
 honor, honour, [1], [abala bose]
 
 
-### [Project 210] (nakul) Generation of Bingo Tables
+### [Project 210] (Nakul) Generation of Bingo Tables
 
 Assume 5 * 5  grid (table).
 Assume 10 people are playing the bingo
