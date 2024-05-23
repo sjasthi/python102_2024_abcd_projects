@@ -26,8 +26,8 @@ def generate_html_table(description, did_you_know):
     <table border="1">
       <thead>
         <tr>
-          <th>Serial No (of SHEROES)</th>
-          <th>hyperlink</th>
+          <th>Hyperlink</th>
+          <th>Name</th>
           <th>Description</th>
           <th>Count of Nouns</th>
           <th>Count of Adjectives</th>
