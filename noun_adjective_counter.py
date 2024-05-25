@@ -1,55 +1,65 @@
-import nltk
+import requests
+from bs4 import BeautifulSoup
 from IPython.display import display, HTML
+import nltk
 
-# Download NLTK resources
+# Download NLTK resources (move these lines outside the loop if they're required only once)
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
-def count_nouns_and_adjectives(text):
-    tokens = nltk.word_tokenize(text)
-    tagged_tokens = nltk.pos_tag(tokens)
+# Define abcd_id_list
+abcd_id_list = [50]  # Define the list of IDs
 
-    noun_count = 0
-    adjective_count = 0
+# Define the base URL
+base_url = "https://www.projectabcd.com/display_the_dress.php?id="
 
-    for _, tag in tagged_tokens:
-        if tag.startswith('NN'):  # Nouns
-            noun_count += 1
-        elif tag.startswith('JJ'):  # Adjectives
-            adjective_count += 1
+# Getting the Sheroes
+for id_number in abcd_id_list:
+    url = base_url + str(id_number)  # Incorporate ID into URL
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"}
 
-    return noun_count, adjective_count
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        try:
+            soup = BeautifulSoup(response.content, 'html.parser')
 
-def generate_html_table(description, did_you_know):
-    noun_count, adjective_count = count_nouns_and_adjectives(description)
-    html_table = f"""
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Hyperlink</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Count of Nouns</th>
-          <th>Count of Adjectives</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>https://abcd2.projectabcd.com/display_the_dress.php?id=1</td>
-          <td>Namaste</td>
-          <td>{description}</td>
-          <td>{noun_count}</td>
-          <td>{adjective_count}</td>
-        </tr>
-      </tbody>
-    </table>
-    """
-    return html_table
+            # Extracting relevant information from the HTML
+            name = soup.find('title').text if soup.find('title') else "Title not found"
+            hyperlink = url
+            description = soup.find('p').text if soup.find('p') else "Description not found"
+            
+            # Counting nouns and adjectives using NLTK
+            tokens = nltk.word_tokenize(description)
+            tagged_tokens = nltk.pos_tag(tokens)
+            noun_count = sum(1 for _, tag in tagged_tokens if tag.startswith('NN'))
+            adjective_count = sum(1 for _, tag in tagged_tokens if tag.startswith('JJ'))
 
-# Input description and "did_you_know" text
-description = "Namasthe is a customary, non-contact form of Hindu greeting. Namaste is usually spoken with a slight bow and hands pressed together, palms touching and fingers pointing upwards. Namaste is used as a form of greeting, acknowledging, and welcoming a relative, guest, or stranger. In some contexts, it can be used to express gratitude for assistance offered or given and to thank people for their generosity. "
-did_you_know = "The gesture of joining both hands has more than a symbolic meaning. It is said to provide a connection between the right and left hemispheres of the brain thus representing unification."
-
-# Generate HTML table
-html_table = generate_html_table(description, did_you_know)
-display(HTML(html_table))
+            # Generating HTML table
+            html_table = f"""
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Hyperlink</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Count of Nouns</th>
+                        <th>Count of Adjectives</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{hyperlink}</td>
+                        <td>{name}</td>
+                        <td>{description}</td>
+                        <td>{noun_count}</td>
+                        <td>{adjective_count}</td>
+                    </tr>
+                </tbody>
+            </table>
+            """
+            display(HTML(html_table))
+        except Exception as e:
+            print("Error:", e)
+    else:
+        print("Error:", response.status_code)
