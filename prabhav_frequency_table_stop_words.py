@@ -6,7 +6,7 @@ import json
 alpha = open("punctuation.txt", "w")
 alpha.write(".\n,\n!\n?\n'")
 beta = open("stop_words.txt", "w")
-beta.write("the, a, an, in, he, she, her")
+beta.write("the, a, an, in, he, she, her, to, it, so, and, has, of, is, was, for, at, from, where, Her, She, as, when, on, with, by, also, In, that, have, been, how, their, one, India")
 
 # opens the file
 beta = open("stop_words.txt", "r")
