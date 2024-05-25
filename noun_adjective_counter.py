@@ -27,17 +27,9 @@ if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # Extracting relevant information from the HTML
-        name = ""
-        for sibling in soup.find_all(text=lambda text: '<<' in text):
-            if sibling.strip().endswith("<<"):
-                name = sibling.strip()[:-2]
-                break
-        if not name:
-            name = "Mother Theresa"
-        
+        name = soup.find('title').text if soup.find('title') else "Title not found"
         hyperlink = url
-        description_tag = soup.find('p')
-        description = description_tag.text if description_tag else "Description not found"
+        description = soup.find('p').text if soup.find('p') else "Description not found"
 
         # Counting nouns and adjectives using NLTK
         tokens = nltk.word_tokenize(description)
