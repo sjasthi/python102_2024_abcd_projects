@@ -17,11 +17,12 @@ abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 
             729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749,
             750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770,
             771, 772]
-
-# initialize the document as a method
-abcd_document = Document()
+# test ids for the presentation
+test_abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50]
 
 def review_document(sheroes: list):
+    # initialize the document as a method
+    abcd_document = Document()
     # creating each dictionary and adding it to an empty list
     for x in sheroes:
         # load all of the necessary data
@@ -43,6 +44,13 @@ def review_document(sheroes: list):
         # newline doesn't work for doc or docx, so we page break instead
         abcd_document.add_page_break()
     # saves all of these methods to a new file
-    abcd_document.save('Project_ABCD.docx')
+    abcd_document.save(f'Project_ABCD_ID:{sheroes[0]}, ..., {sheroes[-1]}.docx')
 
-review_document(abcd_ids)
+# the real version would be able to do this, but it would take way too long
+# review_document(abcd_ids)
+
+# you could also go by each id, but the function would break unless it is surrounded by brackets
+# review_document([753])
+
+# we do this one instead in the interest of time
+review_document(test_abcd_ids)
