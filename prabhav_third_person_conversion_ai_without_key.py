@@ -2,12 +2,15 @@
 import openai
 from openai import OpenAI
 import os
+from dotenv import load_dotenv
 import requests
 import json
 
+load_dotenv()
+
 # defining the API key in two places
-# openai.api_key = "-----------------------------"
-# client = OpenAI(api_key="---------------------")
+# openai.api_key = "-------------------------------------------------------"
+# client = OpenAI(api_key="-----------------------------------------------")
 
 # every abcd id that has the tag "shero"
 abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 112, 114, 115, 116, 117, 119, 151,
@@ -23,6 +26,8 @@ abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50, 52, 53, 101, 102, 110, 111, 
             729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749,
             750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770,
             771, 772]
+# test ids for the presentation
+test_abcd_ids = [26, 27, 28, 29, 30, 31, 32, 33, 39, 50]
 
 def conversion(sheroes: list):
     # create a new file to store all of these conversions
@@ -62,4 +67,11 @@ def conversion(sheroes: list):
             # )
             # a.write(f"\nFirst Person: {completion.choices[0].message.content}\n")
 
-conversion(abcd_ids)
+# the real version would be able to do this, but it would take way too long
+# conversion(abcd_ids)
+
+# you could also go by each id, but the function would break unless the individual id is surrounded by brackets
+# conversion([430])
+
+# we do this one instead in the interest of time
+conversion(test_abcd_ids)
